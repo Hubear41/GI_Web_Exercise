@@ -36,7 +36,10 @@ module.exports = {
                             hmr: process.env.NODE_ENV === "development"
                         }
                     },
-                    "css-loader",
+                    {
+                        loader: "css-loader",
+                        options: { url: false }
+                    },
                     "postcss-loader"
                 ]
             },
@@ -55,6 +58,18 @@ module.exports = {
                     "css-loader",
                     "sass-loader",
                     "postcss-loader"
+                ]
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
+                    }
                 ]
             }
         ]
