@@ -1,7 +1,7 @@
 import React from 'react';
 import NavLinks from './navlinks';
 
-const Navbar = props => {
+const Navbar = () => {
     return (
         <header id="navbar">
             <i className="icon"></i>
