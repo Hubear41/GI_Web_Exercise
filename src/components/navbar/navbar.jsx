@@ -4,7 +4,7 @@ import NavLinks from './navlinks';
 const Navbar = () => {
     return (
         <header id="navbar">
-            <i className="icon"></i>
+            <image></image>
             <NavLinks />
         </header>
     );
