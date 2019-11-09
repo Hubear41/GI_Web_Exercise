@@ -15,15 +15,15 @@
         "links": [
           {
             "title": "US Corn",
-            "subtitle": "Yield Forecast",
+            "subtitle": "Yield Forecast"
           },
           {
             "title": "US Soy",
-            "subtitle": "Yield Forecast",
+            "subtitle": "Yield Forecast"
           },
           {
             "title": "Argentina Soy",
-            "subtitle": "Yield Forecast",
+            "subtitle": "Yield Forecast"
           }
         ]
       },
@@ -36,7 +36,7 @@
         "label": "Gro dictionary",  
         "href": "/products/gro-dictionary",
         "description": "Explore data from our collection of over 8.828M datasets."
-      },
+      }
     ]
   },
   { 

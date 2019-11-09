@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as NavlinkContentUTIL from './util/navlink_content_util'
 
 import styles from './styles/entry.scss';
 
