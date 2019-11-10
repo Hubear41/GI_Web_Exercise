@@ -30,15 +30,9 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            // you can specify a publicPath here
-                            // by default it uses publicPath in webpackOptions.output
-                            publicPath: "../",
+                            publicPath: "/dist/",
                             hmr: process.env.NODE_ENV === "development"
                         }
-                    },
-                    {
-                        loader: "css-loader",
-                        options: { url: false }
                     },
                     "postcss-loader"
                 ]
@@ -49,9 +43,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            // you can specify a publicPath here
-                            // by default it uses publicPath in webpackOptions.output
-                            publicPath: "../",
+                            publicPath: "/dist/",
                             hmr: process.env.NODE_ENV === "development"
                         }
                     },
@@ -61,16 +53,28 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg|png)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'assets/'
+                            outputPath: '/fonts/'
                         }
                     }
                 ]
+            },
+            {
+                test: /\.png/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: '/images/'
+                        }
+                    }
+                ] 
             }
         ]
     },
