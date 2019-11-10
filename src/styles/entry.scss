@@ -1,6 +1,14 @@
+// reset file and some base values
 @import './base/reset.css';
 @import './base/default_values.scss';
+
+// entypo font 
 @import './vendor/entypo.css';
+
+// components
 @import './components/navbar.scss';
 @import './components/navlink_item.scss';
 @import './components/button.scss';
+
+// dropdown menu layout
+@import './layout/dropdown.scss';
