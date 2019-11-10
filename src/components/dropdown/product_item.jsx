@@ -1,5 +1,6 @@
 import React from 'react';
 import LearnMoreBtn from '../buttons/learn_more_btn';
+import imageIndex from '../../util/image_index';
 
 const ProductItem = ({ product, number }) => {
     const { 
@@ -9,9 +10,10 @@ const ProductItem = ({ product, number }) => {
         links,
     } = product;
 
+    // debugger
     return (
         <div className={`dropdown-section-${number} product-item`}>
-            <img></img>
+            <img ></img>
             <h1>{label}</h1>
             <p>{description}</p>
             <LearnMoreBtn href={href} />

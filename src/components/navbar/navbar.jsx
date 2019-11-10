@@ -1,11 +1,11 @@
 import React from 'react';
 import NavLinks from './navlinks';
-import logo from '../../assets/images/logo.png'
+import imageIndex from '../../util/image_index';
 
 const Navbar = () => {
     return (
         <header id="navbar">
-            <img id="navbar-logo" src={logo}></img>
+            <img id="navbar-logo" src={imageIndex.logo}></img>
             <NavLinks />
         </header>
     );
