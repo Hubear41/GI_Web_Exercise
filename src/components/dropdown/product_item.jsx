@@ -12,8 +12,12 @@ const ProductItem = ({ product, number }) => {
     } = product;
 
     return (
-        <div className={`dropdown-section-${number} product-item`}>
-            <img src={imageIndex[href.replace("/", "")]} className="product-image"></img>
+        <section className={`dropdown-section-${number} product-item`}>
+            <img 
+                className="product-image"
+                src={imageIndex[href.replace("/", "")]} 
+                alt={label}
+            ></img>
             <h1>{label}</h1>
             <p>{description}</p>
             
@@ -22,7 +26,7 @@ const ProductItem = ({ product, number }) => {
             </ul>
 
             <LearnMoreBtn href={href} />
-        </div>
+        </section>
     )
 }
 
