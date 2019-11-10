@@ -2,7 +2,7 @@ import React from 'react';
 import ProductItem from './product_item';
 import IndustryItem from './industry_item';
 
-const DropdownMenu = ({ type, subnavList }) => {
+const DropdownMenu = ({ type, subnavList, updateOverDropdown }) => {
     let contentItems = null;
 
     if (type === "PRODUCTS") {
@@ -24,8 +24,13 @@ const DropdownMenu = ({ type, subnavList }) => {
     }
 
     return (
-        <div id="dropdown-menu-wrapper">
-            {contentItems}
+        <div id="dropdown-menu">
+            <div id="dropdown-menu-wrapper"
+                onMouseOver={e => updateOverDropdown(true)}
+                onMouseLeave={e => updateOverDropdown(false)}
+            >
+                {contentItems}
+            </div>
         </div>
     );
 }

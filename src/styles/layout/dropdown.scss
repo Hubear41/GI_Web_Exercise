@@ -1,27 +1,35 @@
-#dropdown-menu-wrapper {
+#dropdown-menu {
     position: absolute;
     top: 82px;
     left: 0;
-    width: 80vw;
-    height: 385px;
+    width: 100%;
+    background: white;
 
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-
-    .dropdown-section-1 {
-        grid-column: 1 / span 3;
-    }
-
-    .dropdown-section-2 {
-        grid-column: 4 / span 3;
-    }
-
-    .dropdown-section-3 {
-        grid-column: 7 / span 3;
-    }
-
-    .dropdown-section-4 {
-        grid-column: 10 / span 3;
+    #dropdown-menu-wrapper {
+        width: 80vw;
+        height: 385px;
+        border-top: 8px transparent;
+        padding: 20px 0;
+        margin: 0 auto;
+    
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+    
+        .dropdown-section-1 {
+            grid-column: 1 / span 3;
+        }
+    
+        .dropdown-section-2 {
+            grid-column: 4 / span 3;
+        }
+    
+        .dropdown-section-3 {
+            grid-column: 7 / span 3;
+        }
+    
+        .dropdown-section-4 {
+            grid-column: 10 / span 3;
+        }
     }
 }

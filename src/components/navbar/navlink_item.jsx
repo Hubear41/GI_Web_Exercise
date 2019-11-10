@@ -13,8 +13,9 @@ const NavLinkItems = ({ label, href, hasSubnav, updateDropdown }) => {
             to={href} 
             id={label.split(' ').join('').toLowerCase()} 
             className={isButton ? "button" : "navlink-item"}
-            onMouseEnter={handleMouseEnter}
+            onMouseOver={handleMouseEnter}
         >
+            {/* <span className="navlink-name">{label}</span> */}
             {label}
         </Link>
     );
