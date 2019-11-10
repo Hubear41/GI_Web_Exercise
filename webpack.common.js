@@ -65,7 +65,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.png/,
+                test: /\.(png|jpg)/, // add more image files types in the future
                 use: [
                     {
                         loader: 'file-loader',
