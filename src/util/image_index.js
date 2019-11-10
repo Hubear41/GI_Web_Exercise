@@ -1,12 +1,13 @@
 // importAll by Patrick Santos
-// https://stackoverflow.com/questions/42118296/dynamically-import-images-from-a-directory-using-webpack
+// assigns a key of the image path to the webpacked url path
 const importAll = require => {
     return require.keys().reduce((acc, next) => {
-        acc[next.replace("./", "").replace(".png", "")] = require(next);
+        acc[next.replace("./", "").replace(".png", "")] = require(next); // removes the first occurence of "./" and ".png"
         return acc;
     }, {});
 }
 
+// imports all images
 const imageIndex = importAll(
     require.context("../assets/images", true, /\.png$/)
 );

@@ -1,5 +1,6 @@
 import React from 'react';
 import LearnMoreBtn from '../buttons/learn_more_btn';
+import ProductLink from './product_link';
 import imageIndex from '../../util/image_index';
 
 const ProductItem = ({ product, number }) => {
@@ -10,12 +11,16 @@ const ProductItem = ({ product, number }) => {
         links,
     } = product;
 
-    // debugger
     return (
         <div className={`dropdown-section-${number} product-item`}>
-            <img ></img>
+            <img src={imageIndex[href.replace("/", "")]} className="product-image"></img>
             <h1>{label}</h1>
             <p>{description}</p>
+            
+            <ul>
+                {links ? <ProductLink links={links} /> : null}
+            </ul>
+
             <LearnMoreBtn href={href} />
         </div>
     )
