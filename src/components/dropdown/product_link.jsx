@@ -1,13 +1,11 @@
 import React from 'react';
 
 const ProductLink = ({ links }) => {
-    const { title, subtitle } = links;
-
     const linkItems = links.map(link => {
         return (
-            <li className="product-link" key={title} >
-                <strong>{title}</strong>
-                <span>{subtitle}</span>
+            <li className="product-link" key={link.title} >
+                <strong>{link.title}</strong>
+                <span>{link.subtitle}</span>
                 <i className="icon-chevron-right1" ></i>
             </li>
         );

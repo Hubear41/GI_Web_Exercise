@@ -11,11 +11,13 @@ const ProductItem = ({ product, number }) => {
         links,
     } = product;
 
+    const imageSrc = imageIndex[`products/${label.replace(new RegExp(" ", 'g'), "-").toLowerCase()}`];
+    
     return (
         <section className={`dropdown-section-${number} product-item`}>
             <img 
                 className="product-image"
-                src={imageIndex[href.replace("/", "")]} 
+                src={imageSrc} 
                 alt={label}
             ></img>
             <h1>{label}</h1>
