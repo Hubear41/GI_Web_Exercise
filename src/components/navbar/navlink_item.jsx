@@ -1,8 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavLinkItems = ({ label, href, subnavlist }) => {
+    const isButton = label === "Sign up" || label == "Login";
+
     return (
-        <a id={label.toLowerCase()} className="navlink-item" href={href}>{label}</a>
+        <Link 
+            to={href} 
+            id={label.split(' ').join('').toLowerCase()} 
+            className={isButton ? "button" : "navlink-item"}
+        >
+            {label}
+        </Link>
     );
 }
 

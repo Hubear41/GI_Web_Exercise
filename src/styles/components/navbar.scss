@@ -1,0 +1,19 @@
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 82px;
+    width: 80vw;
+    padding: 0 10vw;
+
+    #navbar-logo {
+        height: 70%;
+    }
+
+    #navlinks-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+    }
+}

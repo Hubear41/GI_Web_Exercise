@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from './navbar/navbar';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom'
 
 const App = () => (
-    <BrowserRouter>
+    <HashRouter>
         <Route path="/" component={Navbar} />
-    </BrowserRouter>
+    </HashRouter>
 );
 
 export default App;
