@@ -6,7 +6,11 @@ const IndustryItem = ({ industry, idx }) => {
 
     return (
         <figure className={`dropdown-section-${idx} industry-item`}>
-            <img src={label.replaceAll(" ", "-").toLowerCase()} alt={label}/>
+            <img 
+                src={label.replaceAll(" ", "-").toLowerCase()} 
+                alt={label}
+                className="industry-image"
+            />
             <figcaption>{label}</figcaption>
         </figure>
     );

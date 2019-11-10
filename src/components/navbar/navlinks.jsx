@@ -1,14 +1,14 @@
 import React from 'react';
-import navlinkContent from '../../assets/data/content.json';
 import NavLinkItem from './navlink_item';
 
-const NavLinks = props => {
-    const navlinkItems = navlinkContent.map(({ href, label, subnavlist}) => {
+const NavLinks = ({ content, updateDropdown }) => {
+    const navlinkItems = content.map(({ href, label, subnavList}) => {
         return <NavLinkItem 
                     key={label}
                     href={href} 
                     label={label} 
-                    subnavlist={subnavlist || null} 
+                    hasSubnav={Boolean(subnavList)} 
+                    updateDropdown={updateDropdown}
                 />;
     });
     
