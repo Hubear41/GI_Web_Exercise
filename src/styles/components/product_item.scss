@@ -6,7 +6,7 @@
     position: relative;
     margin: 15px 0;
 
-    &::after { // lines between products
+    &::after { // divider lines between products
         content: "";
         position: absolute;
         top: 0;
