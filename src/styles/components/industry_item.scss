@@ -1,61 +1,60 @@
 .industry-item {
-    position: relative;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-right: 8px;
-    cursor: pointer;
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-right: 8px;
+  cursor: pointer;
+
+  .industry-image {
+    min-width: 280px;
+    min-height: 160px;
+    width: calc(100% - 8px);
+    height: auto;
+    box-sizing: content-box;
+  }
+
+  .industry-label {
+    position: absolute;
+    z-index: 30;
+
+    color: white;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2.5px;
+    max-width: calc(100% - 18px);
+
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(#ffffff, 0.3);
+  }
+
+  &:first-of-type {
+    margin-right: 0;
 
     .industry-image {
-        min-width: 280px;
-        min-height: 160px;
-        width: calc(100% - 8px);
-        height: auto;
-        box-sizing: content-box;
+      position: relative;
+      left: -8px;
+      width: calc(100% - (8px * 1.05));
+      transform: scale(1.05);
+      transform-origin: top left;
     }
 
-    .industry-label {
-        position: absolute;
-        z-index: 30;
-
-        color: white;
-        font-size: 12px;
-        line-height: 14px;
-        font-weight: lighter;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 2.5px;
-        max-width: calc(100% - 18px);
-
-        padding: 10px 20px;
-        border-radius: 20px;
-        background-color: rgba(#FFFFFF, 0.3);
+    &::after {
+      display: none;
     }
+  }
 
-    &:first-of-type {
-        margin-right: 0;
-        
-        .industry-image {
-            position: relative;
-            left: -8px;
-            width: calc(100% - (8px * 1.05));
-            transform: scale(1.05);
-            transform-origin: top left;
-        }
+  &:last-of-type {
+    margin-right: 0;
+  }
 
-        &::after {
-            display: none;
-        }
-    }
-
-    &:last-of-type {
-        margin-right: 0;
-    }
-
-
-    &:hover {
-        top: -3px;
-    }  
+  &:hover {
+    top: -3px;
+  }
 }
