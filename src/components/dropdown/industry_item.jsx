@@ -14,7 +14,7 @@ const IndustryItem = ({ industry, number }) => {
                 alt={label}
                 className="industry-image"
             />
-            <figcaption>{label}</figcaption>
+            <figcaption className='industry-label'>{label}</figcaption>
         </figure>
     );
 };
