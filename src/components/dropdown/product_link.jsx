@@ -6,7 +6,7 @@ const ProductLink = ({ links }) => {
             <li className="product-link" key={link.title} >
                 <span>
                     <strong>{link.title}</strong>
-                    {link.subtitle}
+                    {` ${link.subtitle}`}
                     <i className="icon-chevron-right1" ></i>
                 </span>
             </li>
