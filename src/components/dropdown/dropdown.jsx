@@ -15,6 +15,7 @@ const DropdownMenu = ({ type, subnavList, updateDropdown }) => {
         });
     } else if (type === "INDUSTRIES") {
         contentItems = subnavList.map((industry, idx) => {
+            debugger
             return <IndustryItem 
                         key={industry.label}
                         number={idx+1}
