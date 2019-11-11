@@ -1,6 +1,6 @@
 /* reset file and some base values */
 @import './base/reset.css';
-@import './base/default_values.scss';
+@import './base/font_values.scss';
 
 /* entypo font */
 @import './vendor/entypo.css';
@@ -9,6 +9,7 @@
 @import './components/navbar.scss';
 @import './components/navlink_item.scss';
 @import './components/button.scss';
+@import './components/product_item.scss';
 
 /* dropdown menu layout */
 @import './layout/dropdown.scss';

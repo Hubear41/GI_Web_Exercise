@@ -25,7 +25,8 @@ const useMergedState = initialState => {
 }
 
 const Navbar = () => {
-    const [dropdown, updateDropdown] = useMergedState({ type: null, hidden: true });
+    // const [dropdown, updateDropdown] = useMergedState({ type: null, hidden: true });
+    const [dropdown, updateDropdown] = useMergedState({ type: "products", hidden: false });
     const content = dropdownContent();
 
     let dropdownComponent = null;

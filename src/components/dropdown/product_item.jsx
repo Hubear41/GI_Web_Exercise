@@ -20,8 +20,8 @@ const ProductItem = ({ product, number }) => {
                 src={imageSrc} 
                 alt={label}
             ></img>
-            <h1>{label}</h1>
-            <p>{description}</p>
+            <h1 className="navbar-title-big">{label}</h1>
+            <p className="product-description navbar-subtitle">{description}</p>
             
             <ul>
                 {links ? <ProductLink links={links} /> : null}

@@ -15,3 +15,28 @@
 #signup {
     background: rgba(white, 0.5);
 }
+
+.learn-more-btn {
+    font-size: 11px;
+    color: #6B6B6E;
+    background-color: #EEEEF1;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    
+    i {
+        color: #666669;
+        font-size: 21px;
+    }
+    
+    &:hover {
+        background-color: #E31B37;
+        color: white;
+
+        i {
+            color: white;
+        }
+    }
+    
+}
