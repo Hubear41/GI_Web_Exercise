@@ -7,7 +7,8 @@
   background: white;
 
   #dropdown-menu-wrapper {
-    width: 80vw;
+    width: 80vmax;
+    min-width: 900px;
     padding: 15px 0;
     margin: 0 auto;
 

@@ -4,16 +4,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  // box-sizing: content-box;
   width: 100%;
   margin-right: 8px;
   cursor: pointer;
 
   .industry-image {
-    min-width: 280px;
-    min-height: 160px;
+    min-width: 220px;
     width: calc(100% - 8px);
     height: auto;
-    box-sizing: content-box;
   }
 
   .industry-label {
@@ -27,7 +26,7 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 2.5px;
-    max-width: calc(100% - 18px);
+    max-width: calc(100vmax - 18px);
 
     padding: 10px 20px;
     border-radius: 20px;
@@ -39,14 +38,10 @@
 
     .industry-image {
       position: relative;
-      left: -8px;
+      left: -6px;
       width: calc(100% - (8px * 1.05));
       transform: scale(1.05);
       transform-origin: top left;
-    }
-
-    &::after {
-      display: none;
     }
   }
 
