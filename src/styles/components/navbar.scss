@@ -25,6 +25,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+
+            &.selected::after,
+            &.selectable:hover::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                z-index: 20;
+                border-right: 16px solid transparent;
+                border-left: 16px solid transparent;
+                border-bottom: 16px solid white;
+                margin: 0 auto;
+            }
         }
     }
 }

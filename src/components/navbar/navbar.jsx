@@ -49,14 +49,20 @@ const Navbar = () => {
     const handleMouseOver = e => {
         e.stopPropagation();
         if (e.target === document.getElementById("navbar")) {
-            updateDropdown({ hidden: true });
+            updateDropdown({ hidden: true, type: null });
         }
     }
 
     return (
         <header id="navbar" onMouseOver={handleMouseOver}>
             <img id="navbar-logo" src={imageIndex.logo}></img>
-            <NavLinks content={data} updateDropdown={updateDropdown} />
+
+            <NavLinks 
+                content={data} 
+                updateDropdown={updateDropdown} 
+                currentDropdown={dropdown.type} 
+            />
+
             {dropdownComponent}
         </header>
         

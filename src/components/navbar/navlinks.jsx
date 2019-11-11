@@ -1,11 +1,7 @@
 import React from 'react';
 import NavLinkItem from './navlink_item';
 
-const NavLinks = ({ content, updateDropdown }) => {
-    const handleMouseLeave = e => {
-        debugger
-    }
-
+const NavLinks = ({ content, updateDropdown, currentDropdown }) => {
     const navlinkItems = content.map(({ href, label, subnavList}) => {
         return <NavLinkItem 
                     key={label}
@@ -13,6 +9,7 @@ const NavLinks = ({ content, updateDropdown }) => {
                     label={label} 
                     hasSubnav={Boolean(subnavList)} 
                     updateDropdown={updateDropdown}
+                    currentDropdown={currentDropdown}
                 />;
     });
     
