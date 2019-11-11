@@ -1,16 +1,14 @@
 #dropdown-menu {
     position: absolute;
-    top: 74px;
+    top: 82px;
     left: 0;
     z-index: 10;
     width: 100%;
     background: white;
-    border-top: 8px solid transparent;
 
     #dropdown-menu-wrapper {
         width: 80vw;
-        border-top: 8px transparent;
-        padding: 16px 0;
+        padding: 15px 0;
         margin: 0 auto;
     
         display: grid;
@@ -19,7 +17,6 @@
     
         .dropdown-section-1 {
             grid-column: 1 / span 3;
-            // justify-content: start;
         }
     
         .dropdown-section-2 {
@@ -34,7 +31,6 @@
     
         .dropdown-section-4 {
             grid-column: 10 / span 3;
-            // justify-content: end;
         }
     }
 }

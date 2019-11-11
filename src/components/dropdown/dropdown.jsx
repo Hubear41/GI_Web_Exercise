@@ -27,7 +27,7 @@ const DropdownMenu = ({ type, subnavList, updateDropdown }) => {
     return (
         <div id="dropdown-menu"
             // onMouseMove={e => updateDropdown({ hidden: false })}
-            onMouseLeave={e => updateDropdown({ hidden: true })}
+            onMouseLeave={e => updateDropdown({ hidden: true, type: null })}
         >
             <div id="dropdown-menu-wrapper">
                 {contentItems}
