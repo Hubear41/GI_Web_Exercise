@@ -7,6 +7,8 @@ const NavLinkItems = ({ label, href, hasSubnav, updateDropdown }) => {
     const handleMouseEnter = e => {
         if (hasSubnav) {
             updateDropdown({ type: label.toLowerCase(), hidden: false });
+        } else {
+            updateDropdown({ type: null, hidden: true });
         }
     }
 
@@ -17,7 +19,6 @@ const NavLinkItems = ({ label, href, hasSubnav, updateDropdown }) => {
             className={isButton ? "button" : "navlink-item"}
             onMouseOver={handleMouseEnter}
         >
-            {/* <span className="navlink-name">{label}</span> */}
             {label}
         </Link>
     );

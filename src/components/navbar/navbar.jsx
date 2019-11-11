@@ -28,21 +28,6 @@ const Navbar = () => {
     const [dropdown, updateDropdown] = useMergedState({ type: null, hidden: true });
     const content = dropdownContent();
 
-    // useEffect(() => {
-    //     document.addEventListener("mouseover", e => {
-    //         console.log(`is over dropdown: ${dropdown.overDropdown}`);
-
-    //         // console.log(e.target)
-    //         if (!dropdown.overDropdown && 
-    //             e.target !== document.getElementById("products") && 
-    //             e.target !== document.getElementById("industries") &&
-    //             ) {
-    //                 console.log(e.target)
-    //                 updateDropdown({type: null, hidden: true});
-    //             }
-    //     });
-    // }, []);
-
     let dropdownComponent = null;
     if (!dropdown.hidden) {
         if (dropdown.type === "products") {
@@ -60,8 +45,15 @@ const Navbar = () => {
         }
     }
 
+    const handleMouseOver = e => {
+        e.stopPropagation();
+        if (e.target === document.getElementById("navbar")) {
+            updateDropdown({ hidden: true });
+        }
+    }
+
     return (
-        <header id="navbar">
+        <header id="navbar" onMouseOver={handleMouseOver}>
             <img id="navbar-logo" src={imageIndex.logo}></img>
             <NavLinks content={data} updateDropdown={updateDropdown} />
             {dropdownComponent}

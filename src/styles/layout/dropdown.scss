@@ -1,10 +1,11 @@
 #dropdown-menu {
     position: absolute;
-    top: 82px;
+    top: 74px;
     left: 0;
     z-index: 10;
     width: 100%;
     background: white;
+    border-top: 8px solid transparent;
 
     #dropdown-menu-wrapper {
         width: 80vw;
