@@ -21,12 +21,15 @@
         z-index: 30;
 
         color: white;
-        font-size: 14px;
+        font-size: 12px;
+        line-height: 14px;
         font-weight: lighter;
         text-transform: uppercase;
-        letter-spacing: 4px;
+        text-align: center;
+        letter-spacing: 2.5px;
+        max-width: calc(100% - 18px);
 
-        padding: 9px 15px;
+        padding: 10px 20px;
         border-radius: 20px;
         background-color: rgba(#FFFFFF, 0.3);
     }
@@ -46,10 +49,13 @@
             display: none;
         }
     }
-    
-    &:hover {
-        top: -3px;
+
+    &:last-of-type {
+        margin-right: 0;
     }
 
-     
+
+    &:hover {
+        top: -3px;
+    }  
 }

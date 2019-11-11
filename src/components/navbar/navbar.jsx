@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import NavLinks from './navlinks';
 import Dropdown from '../dropdown/dropdown';
 import data from '../../assets/data/content.json';
@@ -26,7 +27,7 @@ const useMergedState = initialState => {
 
 const Navbar = () => {
     // const [dropdown, updateDropdown] = useMergedState({ type: null, hidden: true });
-    const [dropdown, updateDropdown] = useMergedState({ type: "industries", hidden: false });
+    const [dropdown, updateDropdown] = useMergedState({ type: "products", hidden: false });
     const content = dropdownContent();
 
     let dropdownComponent = null;
@@ -46,6 +47,7 @@ const Navbar = () => {
         }
     }
 
+    // removes dropdown user navigates away from navlinks
     const handleMouseOver = e => {
         e.stopPropagation();
         if (e.target === document.getElementById("navbar")) {
@@ -53,9 +55,17 @@ const Navbar = () => {
         }
     }
 
+    const handleClick = e => {
+        props.history.push('/');
+    }
+
     return (
         <header id="navbar" onMouseOver={handleMouseOver}>
-            <img id="navbar-logo" src={imageIndex.logo}></img>
+            <img 
+                id="navbar-logo" 
+                src={imageIndex.logo}
+                onClick={handleClick}
+            ></img>
 
             <NavLinks 
                 content={data} 
@@ -69,4 +79,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar;
+export default withRouter(Navbar);

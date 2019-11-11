@@ -4,25 +4,34 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 0 auto;
-    padding: 15px 20%;
+    margin: 15px 0;
 
-    &::after {
+    &::after { // lines between products
         content: "";
         position: absolute;
         top: 0;
-        right: 0;
+        right: -30%;
         width: 1px;
         height: 300px;
         border-right: 1px solid #F0F0F3;
     }
 
     &:first-of-type {
-        padding-left: 0;
+        margin-right: 30%;
+    }
+
+    &:nth-last-of-type(2) {
+        margin-right: 10%;
+        margin-left: 20%;
+    }
+
+    &:nth-last-of-type(3) {
+        margin-right: 20%;
+        margin-left: 10%;
     }
     
     &:last-of-type {
-        padding-right: 0;
+        margin-left: 30%;
 
         &::after {
             display: none;
@@ -46,6 +55,7 @@
     .dropdown-link-list .product-link {
         margin-bottom: 12px;
         color: #AAAAAD;
+        cursor: pointer;
 
         &:last-of-type {
             margin-bottom: 0;
