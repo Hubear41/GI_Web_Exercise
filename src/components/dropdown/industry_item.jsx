@@ -5,8 +5,7 @@ const IndustryItem = ({ industry, number }) => {
     const { label } = industry;
 
     const imageSrc = imageIndex[`industries/${label.replace(new RegExp(" ", 'g'), "-").toLowerCase()}`];
-    // const images = imageIndex
-    // debugger
+    
     return (
         <figure className={`dropdown-section-${number} industry-item`}>
             <img 

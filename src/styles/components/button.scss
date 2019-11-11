@@ -1,16 +1,26 @@
 .button {
     font-size: 12px;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 30px;
     color: white;
 }
 
 #login {
     border: 1px solid white;
+
+    &:hover {
+        border: 1px solid transparent;
+        background: white;
+        color: #6B6B6E;
+    }
 }
 
 #signup {
-    background: rgba(white, 0.5);
+    background: rgba(white, 0.4);
+
+    &:hover {
+        background: rgba(white, 0.7);
+    }
 }
 
 .learn-more-btn {
