@@ -5,7 +5,9 @@ const NavLinkItems = ({ label, href, hasSubnav, updateDropdown }) => {
     const isButton = label === "Sign up" || label == "Login";
 
     const handleMouseEnter = e => {
-        if (hasSubnav) updateDropdown(label.toLowerCase());
+        if (hasSubnav) {
+            updateDropdown({ type: label.toLowerCase(), hidden: false });
+        }
     }
 
     return (

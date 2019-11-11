@@ -13,44 +13,51 @@ const dropdownContent = () => {
     return { getValue: string => labels[string] };
 }
 
+// create a custom mergedSetState method
+const useMergedState = initialState => {
+    const [state, setState] = useState(initialState);
+    const setMergedState = newState => {
+        setState(prevState => {
+            return Object.assign({}, prevState, newState)
+        });
+    };
+    return [state, setMergedState];
+}
+
 const Navbar = () => {
-    const [dropdownType, updateDropdown] = useState(null);
-    const [isOverDropdown, updateOverDropdown] = useState(false);
+    const [dropdown, updateDropdown] = useMergedState({ type: null, hidden: true });
     const content = dropdownContent();
 
-    // reset isOverDropdown to false to hide dropdown if mouse leaves navbar or dropdown
-    useEffect(() => {
-        document.addEventListener("mousemove", e => {
-            // if (e.target === document.getElementById("products")) console.log("Over Products Nav")
-            // if (e.target === document.getElementById("industries")) console.log("Over Industries Nav")
-            console.log(`is over dropdown: ${isOverDropdown}`)
-            // console.log(e.target)
-            setTimeout(() => {
+    // useEffect(() => {
+    //     document.addEventListener("mouseover", e => {
+    //         console.log(`is over dropdown: ${dropdown.overDropdown}`);
 
-            })
-            if (!(e.target === document.getElementById("products") || 
-                    e.target === document.getElementById("industries")) &&
-                !isOverDropdown
-                ) {
-                    // debugger
-                    updateDropdown(null);
-                }
-        });
-    }, []);
+    //         // console.log(e.target)
+    //         if (!dropdown.overDropdown && 
+    //             e.target !== document.getElementById("products") && 
+    //             e.target !== document.getElementById("industries") &&
+    //             ) {
+    //                 console.log(e.target)
+    //                 updateDropdown({type: null, hidden: true});
+    //             }
+    //     });
+    // }, []);
 
     let dropdownComponent = null;
-    if (dropdownType === "products") {
-        dropdownComponent = <Dropdown 
-                                type="PRODUCTS" 
-                                subnavList={content.getValue("products")} 
-                                updateOverDropdown={updateOverDropdown}
-                            />;
-    } else if ( dropdownType === "industries") {
-        dropdownComponent = <Dropdown 
-                                type="INDUSTRIES" 
-                                subnavList={content.getValue("industries")} 
-                                updateOverDropdown={updateOverDropdown}
-                            />;
+    if (!dropdown.hidden) {
+        if (dropdown.type === "products") {
+            dropdownComponent = <Dropdown 
+                                    type="PRODUCTS" 
+                                    subnavList={content.getValue("products")} 
+                                    updateDropdown={updateDropdown}
+                                />;
+        } else if (dropdown.type === "industries") {
+            dropdownComponent = <Dropdown 
+                                    type="INDUSTRIES" 
+                                    subnavList={content.getValue("industries")} 
+                                    updateDropdown={updateDropdown}
+                                />;
+        }
     }
 
     return (
