@@ -23,9 +23,7 @@ const ProductItem = ({ product, number }) => {
             <h1 className="navbar-title-big">{label}</h1>
             <p className="product-description navbar-subtitle">{description}</p>
             
-            <ul>
-                {links ? <ProductLink links={links} /> : null}
-            </ul>
+            {links ? <ProductLink links={links} /> : null}
 
             <LearnMoreBtn href={href} />
         </section>

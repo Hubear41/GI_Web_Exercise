@@ -7,9 +7,6 @@
 
 #login {
     border: 1px solid white;
-    -webkit-background-clip: padding-box; 
-    -moz-background-clip:    padding; 
-    background-clip:         padding-box;
 }
 
 #signup {
@@ -20,7 +17,7 @@
     font-size: 11px;
     color: #6B6B6E;
     background-color: #EEEEF1;
-    padding: 4px 12px;
+    padding: 4px 7px 4px 14px;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -28,6 +25,8 @@
     i {
         color: #666669;
         font-size: 21px;
+        vertical-align: middle;
+        font-weight: bold;
     }
     
     &:hover {

@@ -6,8 +6,8 @@ const LearnMoreBtn = ({ href }) => {
                 to={href} 
                 className="learn-more-btn"
             >
-                Learn more
-                <i className="icon-chevron-right1"></i>
+                <span>Learn more<i className="icon-chevron-right1"></i></span>    
+                
             </Link>;
 }
 
