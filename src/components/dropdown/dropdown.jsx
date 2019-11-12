@@ -6,20 +6,12 @@ const DropdownMenu = ({ type, subnavList, updateDropdown }) => {
   let contentItems = null;
 
   if (type === "PRODUCTS") {
-    contentItems = subnavList.map((product, idx) => {
-      return (
-        <ProductItem key={product.label} number={idx + 1} product={product} />
-      );
+    contentItems = subnavList.map(product => {
+      return <ProductItem key={product.label} product={product} />;
     });
   } else if (type === "INDUSTRIES") {
-    contentItems = subnavList.map((industry, idx) => {
-      return (
-        <IndustryItem
-          key={industry.label}
-          number={idx + 1}
-          industry={industry}
-        />
-      );
+    contentItems = subnavList.map(industry => {
+      return <IndustryItem key={industry.label} industry={industry} />;
     });
   }
 

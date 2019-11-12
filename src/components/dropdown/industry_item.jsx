@@ -1,7 +1,7 @@
 import React from "react";
 import imageIndex from "../../util/image_index";
 
-const IndustryItem = ({ industry, number }) => {
+const IndustryItem = ({ industry }) => {
   const { label } = industry;
 
   const imageSrc =
@@ -10,7 +10,7 @@ const IndustryItem = ({ industry, number }) => {
     ];
 
   return (
-    <figure className={`dropdown-section-${number} industry-item`}>
+    <figure className={`dropdown-col-3 industry-item`}>
       <img src={imageSrc} alt={label} className="industry-image" />
       <figcaption className="industry-label">{label}</figcaption>
     </figure>

@@ -3,7 +3,7 @@ import LearnMoreBtn from "../buttons/learn_more_btn";
 import ProductLink from "./product_link";
 import imageIndex from "../../util/image_index";
 
-const ProductItem = ({ product, number }) => {
+const ProductItem = ({ product }) => {
   const { label, href, description, links } = product;
 
   const imageSrc =
@@ -12,7 +12,7 @@ const ProductItem = ({ product, number }) => {
     ];
 
   return (
-    <section className={`dropdown-section-${number} product-item`}>
+    <section className={`dropdown-col-3 product-item`}>
       <img className="product-image" src={imageSrc} alt={label}></img>
       <h1 className="navbar-title-big">{label}</h1>
       <p className="product-description navbar-subtitle">{description}</p>
