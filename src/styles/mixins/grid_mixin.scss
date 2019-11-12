@@ -1,0 +1,9 @@
+@mixin grid-columns($cols: 12) {
+  @for $i from 1 through $cols {
+    &-#{$i} {
+      grid-column: span $i;
+      -ms-grid-column: $i;
+      -ms-grid-row: 1;
+    }
+  }
+}

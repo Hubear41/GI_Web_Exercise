@@ -1,3 +1,5 @@
+@import "../mixins/grid_mixin.scss";
+
 #dropdown-menu {
   position: absolute;
   top: 82px;
@@ -12,56 +14,15 @@
     padding: 15px 0;
     margin: 0 auto;
 
+    display: -ms-grid; /* IE 10 */
     display: grid;
+    -ms-grid-columns: (1fr) [12];
     grid-template-columns: repeat(12, 1fr);
+    -ms-grid-rows: auto;
     grid-template-rows: auto;
 
-    .dropdown-col-1 {
-      grid-column: span 1;
-    }
-
-    .dropdown-col-2 {
-      grid-column: span 2;
-    }
-
-    .dropdown-col-3 {
-      grid-column: span 3;
-    }
-
-    .dropdown-col-4 {
-      grid-column: span 4;
-    }
-
-    .dropdown-col-5 {
-      grid-column: span 5;
-    }
-
-    .dropdown-col-6 {
-      grid-column: span 6;
-    }
-
-    .dropdown-col-7 {
-      grid-column: span 7;
-    }
-
-    .dropdown-col-8 {
-      grid-column: span 8;
-    }
-
-    .dropdown-col-9 {
-      grid-column: span 9;
-    }
-
-    .dropdown-col-10 {
-      grid-column: span 10;
-    }
-
-    .dropdown-col-11 {
-      grid-column: span 11;
-    }
-
-    .dropdown-col-12 {
-      grid-column: span 12;
+    .dropdown-col {
+      @include grid_columns($cols: 12);
     }
   }
 }
