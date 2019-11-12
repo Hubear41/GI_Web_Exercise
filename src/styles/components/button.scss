@@ -3,6 +3,7 @@
   padding: 10px 25px;
   border-radius: 30px;
   color: white;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 0 10px;
 }
@@ -31,7 +32,11 @@
   background-color: #eeeef1;
   padding: 5px 7px 5px 14px;
   border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   i {
