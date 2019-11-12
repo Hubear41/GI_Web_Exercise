@@ -1,4 +1,6 @@
-# GI Web Dev Exercise
+# GI Web Dev Exercise ReadMe
+
+Written by Dennis Hu
 
 ## Installation
 
@@ -11,3 +13,9 @@ Run `npm install` and `npm start` will install the necessary dependencies and th
   "port": 8080
 }
 ```
+
+## Technologies & Languages
+
+- React Hooks
+- Sass/Scss
+- Webpack
