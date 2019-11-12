@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import imageIndex from "../../util/image_index";
 
 const IndustryItem = ({ industry }) => {
@@ -10,10 +11,16 @@ const IndustryItem = ({ industry }) => {
     ];
 
   return (
-    <figure className={`dropdown-col-3 industry-item`}>
-      <img src={imageSrc} alt={label} className="industry-image" />
+    <Link
+      className={`dropdown-col-3 industry-item`}
+      to={`/${label.replace(new RegExp(" ", "g"), "-").toLowerCase()}`}
+    >
+      <figure className="industry-image-wrapper">
+        <img src={imageSrc} alt={label} className={"industry-image"} />
+      </figure>
+
       <figcaption className="industry-label">{label}</figcaption>
-    </figure>
+    </Link>
   );
 };
 

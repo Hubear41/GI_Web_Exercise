@@ -30,6 +30,10 @@
     position: relative;
     padding: 0 10px;
 
+    &:hover {
+      color: rgb(214, 214, 214);
+    }
+
     &.selected::after,
     &.selectable:hover::after {
       content: "";
